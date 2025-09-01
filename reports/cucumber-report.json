@@ -1,0 +1,118 @@
+[
+  {
+    "description": "  As a user\n  I want to search for GitHub users and explore their repositories\n  So that I can discover and follow interesting developers",
+    "elements": [
+      {
+        "description": "",
+        "id": "github-user-search-and-repository-exploration;search-for-user-and-explore-their-repositories",
+        "keyword": "Scenario",
+        "line": 6,
+        "name": "Search for user and explore their repositories",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1057626915
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1354711749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I search for user \"zulyarkurban\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3057001374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:33"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4749361917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:85"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2049756666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:133"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 892309833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:142"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2025443957
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164139750
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "github-user-search-and-repository-exploration",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "GitHub User Search and Repository Exploration",
+    "tags": [],
+    "uri": "src/features/github-user-search.feature"
+  }
+]

@@ -1,0 +1,80 @@
+name: Playwright Cucumber Tests
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+    
+    - name: Run Cucumber tests with Playwright
+      run: npm run test:cucumber:html
+      env:
+        CI: true
+    
+    - name: Upload test reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: test-reports
+        path: |
+          reports/
+          test-results/
+        retention-days: 30
+    
+    - name: Upload Cucumber HTML Report
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: cucumber-html-report
+        path: reports/cucumber-report.html
+        retention-days: 30
+
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    steps:
+    - uses: actions/checkout@v4
+    
+    - uses: actions/setup-node@v4
+      with:
+        node-version: lts/*
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Build project (if needed)
+      run: |
+        if [ -f "build.js" ] || [ -f "webpack.config.js" ] || grep -q '"build"' package.json; then
+          npm run build || echo "No build script found, skipping build step"
+        else
+          echo "No build configuration found, skipping build step"
+        fi
+    
+    - name: Deploy to staging/production
+      run: |
+        echo "Deployment step - configure based on your deployment target"
+        echo "Examples:"
+        echo "- Deploy to Netlify: npm run deploy:netlify"
+        echo "- Deploy to Vercel: npm run deploy:vercel"
+        echo "- Deploy to AWS: npm run deploy:aws"
+        echo "- Deploy via SSH: rsync or scp commands"
