@@ -10,7 +10,7 @@ Before(async function (this: CustomWorld) {
 });
 
 After(async function (this: CustomWorld) {
-  await this.destroy();
+  await this.cleanup();
 });
 
 AfterAll(async function () {

@@ -1,0 +1,54 @@
+{
+  "testUsers": [
+    {
+      "username": "zulyarkurban",
+      "description": "Original test user with automation frameworks",
+      "expectedRepoCount": 25,
+      "tags": ["automation", "frameworks"]
+    },
+    {
+      "username": "microsoft",
+      "description": "Microsoft organization with many repositories",
+      "expectedRepoCount": 30,
+      "tags": ["enterprise", "large-scale"]
+    },
+    {
+      "username": "facebook",
+      "description": "Meta/Facebook organization",
+      "expectedRepoCount": 30,
+      "tags": ["enterprise", "react"]
+    },
+    {
+      "username": "google",
+      "description": "Google organization",
+      "expectedRepoCount": 30,
+      "tags": ["enterprise", "tech-giant"]
+    },
+    {
+      "username": "torvalds",
+      "description": "Linus Torvalds - Linux creator",
+      "expectedRepoCount": 5,
+      "tags": ["individual", "linux"]
+    },
+    {
+      "username": "octocat",
+      "description": "GitHub's mascot account",
+      "expectedRepoCount": 10,
+      "tags": ["github", "demo"]
+    }
+  ],
+  "environments": {
+    "dev": {
+      "defaultUser": "zulyarkurban",
+      "timeout": 30000
+    },
+    "staging": {
+      "defaultUser": "octocat",
+      "timeout": 20000
+    },
+    "prod": {
+      "defaultUser": "microsoft",
+      "timeout": 15000
+    }
+  }
+}

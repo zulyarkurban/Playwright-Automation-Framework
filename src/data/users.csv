@@ -1,0 +1,10 @@
+username,description,expectedRepoCount,tags
+zulyarkurban,Original test user with automation frameworks,25,automation;frameworks
+microsoft,Microsoft organization with many repositories,30,enterprise;large-scale
+facebook,Meta/Facebook organization,30,enterprise;react
+google,Google organization,30,enterprise;tech-giant
+torvalds,Linus Torvalds - Linux creator,5,individual;linux
+octocat,GitHub's mascot account,10,github;demo
+defunkt,GitHub co-founder,15,individual;github-founder
+mojombo,GitHub co-founder Tom Preston-Werner,20,individual;github-founder
+pjhyett,GitHub co-founder PJ Hyett,10,individual;github-founder

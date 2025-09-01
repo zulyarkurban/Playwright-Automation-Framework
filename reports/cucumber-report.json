@@ -1,20 +1,20 @@
 [
   {
-    "description": "  As a user\n  I want to search for GitHub users and explore their repositories\n  So that I can discover and follow interesting developers",
+    "description": "  As a user\n  I want to search for different GitHub users dynamically\n  So that I can test various user profiles and repository structures",
     "elements": [
       {
         "description": "",
-        "id": "github-user-search-and-repository-exploration;search-for-user-and-explore-their-repositories",
-        "keyword": "Scenario",
-        "line": 6,
-        "name": "Search for user and explore their repositories",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Search for multiple users with different profiles",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1057626915
+              "duration": 1132812374
             }
           },
           {
@@ -23,11 +23,1828 @@
             "line": 7,
             "name": "I navigate to the GitHub user search application",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:5"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 1354711749
+              "duration": 1861495667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for user \"zulyarkurban\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21257247749
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5598160124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1051342083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 11968915
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3053619834
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 767263208
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Search for multiple users with different profiles",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1357911041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1216753624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for user \"octocat\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21239829999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6629712792
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 805980834
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 151551292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3021515499
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 171743999
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
+        "keyword": "Scenario Outline",
+        "line": 20,
+        "name": "Search for multiple users with different profiles",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1080856207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1469336125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for user \"torvalds\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21243636458
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5544443375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 521719375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 17242624
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3033639875
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 152868291
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
+        "keyword": "Scenario Outline",
+        "line": 21,
+        "name": "Search for multiple users with different profiles",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 803236666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1297284041
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for user \"microsoft\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21232891375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8916449208
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11020821332,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\u001b[22m\n\n    at Proxy.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at GitHubProfilePage.assertElementVisible (/Volumes/Documents/Projects/Playwright_Automation/src/pages/BasePage.ts:189:27)\n    at GitHubProfilePage.verifyRepositoriesPageLoaded (/Volumes/Documents/Projects/Playwright_Automation/src/pages/GitHubProfilePage.ts:86:16)\n    at async CustomWorld.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/src/src/tests/step-definitions/github-user-search-steps-pom.ts:32:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 181745625
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Search for multiple users with different profiles",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 712578207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1348960832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for user \"facebook\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21245148416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5861530499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11035426999,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\u001b[22m\n\n    at Proxy.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at GitHubProfilePage.assertElementVisible (/Volumes/Documents/Projects/Playwright_Automation/src/pages/BasePage.ts:189:27)\n    at GitHubProfilePage.verifyRepositoriesPageLoaded (/Volumes/Documents/Projects/Playwright_Automation/src/pages/GitHubProfilePage.ts:86:16)\n    at async CustomWorld.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/src/src/tests/step-definitions/github-user-search-steps-pom.ts:32:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 154954415
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 33,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 844401541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1249614083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"zulyarkurban\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21250820124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5669885375
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 659822833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 28265541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3029117416
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 140505665
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 34,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 683839750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1367597374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"torvalds\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21271321374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5658418499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 572196667
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29224416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3013341749
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 177001583
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 35,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 801995457
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1317857874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"defunkt\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21248426791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6009616125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1041364832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16049874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3038502457
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155766707
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 39,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 717369124
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1899037125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"microsoft\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21246029292
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6147357916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11071567582,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\u001b[22m\n\n    at Proxy.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at GitHubProfilePage.assertElementVisible (/Volumes/Documents/Projects/Playwright_Automation/src/pages/BasePage.ts:189:27)\n    at GitHubProfilePage.verifyRepositoriesPageLoaded (/Volumes/Documents/Projects/Playwright_Automation/src/pages/GitHubProfilePage.ts:86:16)\n    at runNextTicks (node:internal/process/task_queues:65:5)\n    at processImmediate (node:internal/timers:473:9)\n    at async CustomWorld.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/src/src/tests/step-definitions/github-user-search-steps-pom.ts:32:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155037832
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 40,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 745490500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2322195874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"facebook\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21239956750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5641484625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11026611832,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\u001b[22m\n\n    at Proxy.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at GitHubProfilePage.assertElementVisible (/Volumes/Documents/Projects/Playwright_Automation/src/pages/BasePage.ts:189:27)\n    at GitHubProfilePage.verifyRepositoriesPageLoaded (/Volumes/Documents/Projects/Playwright_Automation/src/pages/GitHubProfilePage.ts:86:16)\n    at async CustomWorld.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/src/src/tests/step-definitions/github-user-search-steps-pom.ts:32:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 147687375
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 41,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 758259707
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1756301708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"google\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21241145000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5960638333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11012740290,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\u001b[22m\n\n    at Proxy.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at GitHubProfilePage.assertElementVisible (/Volumes/Documents/Projects/Playwright_Automation/src/pages/BasePage.ts:189:27)\n    at GitHubProfilePage.verifyRepositoriesPageLoaded (/Volumes/Documents/Projects/Playwright_Automation/src/pages/GitHubProfilePage.ts:86:16)\n    at async CustomWorld.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/src/src/tests/step-definitions/github-user-search-steps-pom.ts:32:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 398458625
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 45,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1539301916
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1361338875
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"defunkt\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21237689207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5645739207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1046166666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9278959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3033093624
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 154222292
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 46,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 768218374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1410711249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"mojombo\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21248692500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6279568166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1025410290
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 9380833
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3038351625
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 147795207
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-users-by-category",
+        "keyword": "Scenario Outline",
+        "line": 47,
+        "name": "Search for users by category",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 741292791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1606075874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 25,
+            "name": "I search for user \"pjhyett\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21235037957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5618881541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 27,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 505444042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 28,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4354500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 29,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3016613707
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 224247875
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-using-external-data-file",
+        "keyword": "Scenario",
+        "line": 50,
+        "name": "Search using external data file",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 753330709
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1368021874
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 51,
+            "name": "I search for a user from the test data file",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:51"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21241731583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 52,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5717884625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 53,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1051150459
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 54,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 8816417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 55,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3031364958
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 182028250
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@data-driven",
+            "line": 49
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-using-environment-specific-user",
+        "keyword": "Scenario",
+        "line": 58,
+        "name": "Search using environment-specific user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 739822000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1311220374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 59,
+            "name": "I search for the default user for current environment",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:66"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21237199957
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 60,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5779588416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 61,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1047712500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 62,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 10258333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 63,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3064204708
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 238381457
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@environment",
+            "line": 57
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-random-user",
+        "keyword": "Scenario",
+        "line": 66,
+        "name": "Search for random user",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 752128374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1433087249
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 67,
+            "name": "I search for a random user from test data",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:82"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21232798500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 68,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6517928291
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 69,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11004088125,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\u001b[22m\n\n    at Proxy.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at GitHubProfilePage.assertElementVisible (/Volumes/Documents/Projects/Playwright_Automation/src/pages/BasePage.ts:189:27)\n    at GitHubProfilePage.verifyRepositoriesPageLoaded (/Volumes/Documents/Projects/Playwright_Automation/src/pages/GitHubProfilePage.ts:86:16)\n    at async CustomWorld.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/src/src/tests/step-definitions/github-user-search-steps-pom.ts:32:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 70,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 71,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 165382584
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@random",
+            "line": 65
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "dynamic-github-user-search-and-repository-exploration",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Dynamic GitHub User Search and Repository Exploration",
+    "tags": [],
+    "uri": "src/features/github-user-search-dynamic.feature"
+  },
+  {
+    "description": "  As a user\n  I want to search for GitHub users and explore their repositories\n  So that I can discover and follow interesting developers",
+    "elements": [
+      {
+        "description": "",
+        "id": "github-user-search-and-repository-exploration;search-for-user-and-explore-their-repositories",
+        "keyword": "Scenario Outline",
+        "line": 16,
+        "name": "Search for user and explore their repositories",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 756238750
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1438312917
             }
           },
           {
@@ -36,11 +1853,11 @@
             "line": 8,
             "name": "I search for user \"zulyarkurban\"",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:13"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
             },
             "result": {
               "status": "passed",
-              "duration": 3057001374
+              "duration": 21256647666
             }
           },
           {
@@ -49,11 +1866,11 @@
             "line": 9,
             "name": "I click on the GitHub profile link",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:33"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
             },
             "result": {
               "status": "passed",
-              "duration": 4749361917
+              "duration": 5654219875
             }
           },
           {
@@ -62,11 +1879,11 @@
             "line": 10,
             "name": "I click on the repositories section",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:85"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
             },
             "result": {
               "status": "passed",
-              "duration": 2049756666
+              "duration": 1013178791
             }
           },
           {
@@ -75,11 +1892,11 @@
             "line": 11,
             "name": "I should see all public repositories",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:133"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
             },
             "result": {
               "status": "passed",
-              "duration": 892309833
+              "duration": 6829374
             }
           },
           {
@@ -88,11 +1905,11 @@
             "line": 12,
             "name": "I print out all public repository names",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps.ts:142"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
             },
             "result": {
               "status": "passed",
-              "duration": 2025443957
+              "duration": 3026681957
             }
           },
           {
@@ -100,7 +1917,323 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 164139750
+              "duration": 164287833
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "github-user-search-and-repository-exploration;search-for-user-and-explore-their-repositories",
+        "keyword": "Scenario Outline",
+        "line": 17,
+        "name": "Search for user and explore their repositories",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 727481917
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1272145499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I search for user \"octocat\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21285334207
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5516539665
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 552910583
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 14240625
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3015448708
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 155753207
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "github-user-search-and-repository-exploration;search-for-user-and-explore-their-repositories",
+        "keyword": "Scenario Outline",
+        "line": 18,
+        "name": "Search for user and explore their repositories",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 769062542
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2125850791
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 8,
+            "name": "I search for user \"torvalds\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21230386500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5632809999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1041661541
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4454790
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3018367624
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 219458541
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "github-user-search-and-repository-exploration;search-for-specific-user-with-validation",
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Search for specific user with validation",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 763260499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 21,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1545627333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 22,
+            "name": "I search for user \"microsoft\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21234107084
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7723669083
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 24,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:30"
+            },
+            "result": {
+              "status": "failed",
+              "duration": 11010834749,
+              "error_message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m failed\n\nLocator:  locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\nExpected: visible\nReceived: <element(s) not found>\nTimeout:  5000ms\n\nCall log:\n\u001b[2m  - Expect \"to.be.visible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for locator('[data-testid=\"repos-list\"], .js-repo-list, #user-repositories-list').first()\u001b[22m\n\n    at Proxy.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/node_modules/playwright/lib/matchers/expect.js:221:24)\n    at GitHubProfilePage.assertElementVisible (/Volumes/Documents/Projects/Playwright_Automation/src/pages/BasePage.ts:189:27)\n    at GitHubProfilePage.verifyRepositoriesPageLoaded (/Volumes/Documents/Projects/Playwright_Automation/src/pages/GitHubProfilePage.ts:86:16)\n    at async CustomWorld.<anonymous> (/Volumes/Documents/Projects/Playwright_Automation/src/src/tests/step-definitions/github-user-search-steps-pom.ts:32:3)"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 25,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:35"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 26,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:43"
+            },
+            "result": {
+              "status": "skipped",
+              "duration": 0
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 164270790
             }
           }
         ],
