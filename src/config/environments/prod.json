@@ -19,9 +19,13 @@
   },
   "test": {
     "timeout": 60000,
-    "retries": 2,
+    "retries": 3,
     "workers": 4,
-    "reporter": "html"
+    "reporter": "html",
+    "retryDelay": 5000,
+    "retryOnlyFailures": true,
+    "retryTimeoutMultiplier": 2.5,
+    "failFast": true
   },
   "logging": {
     "level": "warn",

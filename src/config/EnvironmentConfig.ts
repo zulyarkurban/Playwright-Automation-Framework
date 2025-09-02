@@ -25,6 +25,10 @@ export interface EnvironmentConfig {
     retries: number;
     workers: number;
     reporter: string;
+    retryDelay?: number;
+    retryOnlyFailures?: boolean;
+    retryTimeoutMultiplier?: number;
+    failFast?: boolean;
   };
   logging: {
     level: string;

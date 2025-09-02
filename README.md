@@ -106,6 +106,14 @@ npm run test:cucumber:headless
 - `npm run env:staging` - Load and display staging configuration
 - `npm run env:prod` - Load and display prod configuration
 
+### Failed Test Retry
+- `npm run retry:failed` - Retry failed tests from last run
+- `npm run retry:dev` - Retry failed tests in dev environment
+- `npm run retry:staging` - Retry failed tests in staging environment
+- `npm run retry:prod` - Retry failed tests in prod environment
+- `npm run retry:stats` - Show retry statistics and success rates
+- `npm run retry:clear` - Clear failed tests list
+
 ### Legacy Parallel Execution
 - `npm run test:parallel` - Run with 4 workers (recommended)
 - `npm run test:parallel:fast` - Run with 6 workers (high-performance)
@@ -385,6 +393,51 @@ Reports are automatically uploaded as GitHub Actions artifacts:
 
 For detailed reporting configuration and customization, see the [Reporting Guide](docs/REPORTING.md).
 
+## 🔄 Failed Test Retry System
+
+### Automatic Retry Configuration
+
+Each environment has specific retry settings optimized for its use case:
+
+- **Development**: 1 retry with 2s delay (quick feedback)
+- **Staging**: 2 retries with 3s delay (moderate resilience)  
+- **Production**: 3 retries with 5s delay (maximum resilience)
+
+### Retry Commands
+
+```bash
+# Retry failed tests from last execution
+npm run retry:failed
+
+# Environment-specific retries
+npm run retry:dev        # Retry in development environment
+npm run retry:staging    # Retry in staging environment
+npm run retry:prod       # Retry in production environment
+
+# Retry management
+npm run retry:stats      # Show retry statistics and success rates
+npm run retry:clear      # Clear failed tests list for fresh start
+```
+
+### Advanced Retry Options
+
+```bash
+# Custom retry configuration
+./scripts/retry-failed-tests.sh -e staging -r 5 -d 3
+
+# Show retry script help
+./scripts/retry-failed-tests.sh --help
+```
+
+### Retry Workflow
+
+1. **Test Execution** → Automatic failure detection and logging
+2. **Retry Analysis** → Smart retry logic based on error types
+3. **Re-execution** → Run only failed tests with exponential backoff
+4. **Results Comparison** → Generate retry success statistics
+
+For comprehensive retry strategies and configuration, see the [Retry Strategies Guide](docs/RETRY_STRATEGIES.md).
+
 ## 🔧 Advanced Usage
 
 ### Custom Worker Configuration
@@ -445,6 +498,7 @@ npm run test:cucumber -- --verbose
 ## 📚 Documentation
 
 - [Test Reporting Guide](docs/REPORTING.md) - Comprehensive reporting features and configuration
+- [Retry Strategies Guide](docs/RETRY_STRATEGIES.md) - Failed test retry mechanisms and configuration
 - [Environment Configuration Guide](docs/ENVIRONMENT_CONFIGURATION.md) - Complete environment setup and usage
 - [Parallel Execution Guide](docs/PARALLEL_EXECUTION.md) - Comprehensive parallel testing guide
 - [Page Object Model](README-POM-Architecture.md) - POM architecture details

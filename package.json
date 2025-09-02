@@ -25,6 +25,13 @@
     "env:dev": "node src/config/environment-loader.js dev",
     "env:staging": "node src/config/environment-loader.js staging",
     "env:prod": "node src/config/environment-loader.js prod",
+    "retry:failed": "./scripts/retry-failed-tests.sh",
+    "retry:dev": "./scripts/retry-failed-tests.sh -e dev",
+    "retry:staging": "./scripts/retry-failed-tests.sh -e staging",
+    "retry:prod": "./scripts/retry-failed-tests.sh -e prod",
+    "retry:stats": "./scripts/retry-failed-tests.sh --stats",
+    "retry:clear": "./scripts/retry-failed-tests.sh --clear",
+    "retry:demo": "npx ts-node src/utils/TestRetryDemo.ts",
     "build": "echo 'No build step required for test automation project'",
     "deploy": "echo 'Configure deployment target in GitHub Actions'"
   },
