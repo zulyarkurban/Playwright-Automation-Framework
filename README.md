@@ -304,10 +304,86 @@ The framework automatically displays performance metrics:
 
 ### Generated Reports
 
-- **HTML Report**: `reports/cucumber-report.html`
-- **JSON Report**: `reports/cucumber-report.json`
-- **Screenshots**: `test-results/` (on failure)
-- **Videos**: `test-results/` (on failure)
+- **HTML Report**: `reports/cucumber-report.html` - Interactive test results with embedded media
+- **JSON Report**: `reports/cucumber-report.json` - Machine-readable test data
+- **Parallel Reports**: `reports/cucumber-report-parallel.html/json` - Consolidated parallel execution results
+- **Screenshots**: `test-results/screenshots/` - Automatic capture on failures
+- **Videos**: `test-results/videos/` - Test execution recordings (when enabled)
+- **Traces**: `test-results/traces/` - Playwright traces for debugging (dev environment)
+
+## 📊 Test Reporting
+
+### Report Types and Features
+
+The framework generates comprehensive reports with different levels of detail based on your environment:
+
+#### HTML Reports
+- **Interactive test results** with expandable scenarios
+- **Embedded screenshots and videos** at failure points
+- **Step-by-step execution details** with timing information
+- **Pass/fail statistics** and execution summaries
+- **Environment information** and configuration details
+
+#### JSON Reports
+- **Machine-readable test data** for integration with other tools
+- **Complete execution metadata** including timing and errors
+- **Step definitions and results** for automated analysis
+- **Custom report generation** support
+
+#### Environment-Specific Reporting
+
+**Development Environment** (`npm run test:dev`)
+- Full reporting with screenshots, videos, and Playwright traces
+- Debug-level logging for detailed troubleshooting
+- Interactive HTML reports for manual analysis
+
+**Staging Environment** (`npm run test:staging`)
+- Standard reporting with screenshots only
+- Info-level logging for moderate detail
+- Optimized for CI/CD integration
+
+**Production Environment** (`npm run test:prod`)
+- Minimal reporting for performance
+- Warning-level logging only
+- Lightweight artifacts for fast execution
+
+### Report Locations
+
+```bash
+reports/
+├── cucumber-report.html              # Main HTML report
+├── cucumber-report.json              # Main JSON report
+├── cucumber-report-parallel.html     # Parallel execution HTML
+└── cucumber-report-parallel.json     # Parallel execution JSON
+
+test-results/
+├── screenshots/                      # Test screenshots
+├── videos/                          # Test execution videos
+├── traces/                          # Playwright traces (dev only)
+└── .last-run.json                   # Execution metadata
+```
+
+### Viewing Reports
+
+```bash
+# Open HTML report in browser
+open reports/cucumber-report.html
+
+# View JSON report data
+cat reports/cucumber-report.json | jq '.'
+
+# Check latest execution summary
+cat test-results/.last-run.json
+```
+
+### CI/CD Artifact Integration
+
+Reports are automatically uploaded as GitHub Actions artifacts:
+- Individual worker reports: `test-reports-worker-{id}-{run-number}`
+- Consolidated reports: `consolidated-test-reports-{run-number}`
+- Retention period: 30 days
+
+For detailed reporting configuration and customization, see the [Reporting Guide](docs/REPORTING.md).
 
 ## 🔧 Advanced Usage
 
@@ -368,6 +444,7 @@ npm run test:cucumber -- --verbose
 
 ## 📚 Documentation
 
+- [Test Reporting Guide](docs/REPORTING.md) - Comprehensive reporting features and configuration
 - [Environment Configuration Guide](docs/ENVIRONMENT_CONFIGURATION.md) - Complete environment setup and usage
 - [Parallel Execution Guide](docs/PARALLEL_EXECUTION.md) - Comprehensive parallel testing guide
 - [Page Object Model](README-POM-Architecture.md) - POM architecture details
