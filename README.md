@@ -4,6 +4,7 @@ A comprehensive test automation framework integrating Cucumber BDD with Playwrig
 
 ## 🚀 Key Features
 
+- **Environment Configuration**: Multi-environment support (dev, staging, prod) with specific URLs and settings
 - **Parallel Execution**: Run tests across multiple workers for 75-83% faster execution
 - **Dynamic Data Testing**: CSV/JSON data-driven test scenarios
 - **Page Object Model**: Maintainable and scalable test architecture
@@ -16,6 +17,14 @@ A comprehensive test automation framework integrating Cucumber BDD with Playwrig
 
 ```
 src/
+├── config/                             # Environment configuration
+│   ├── environments/                   # Environment-specific configs
+│   │   ├── base.json                   # Base configuration
+│   │   ├── dev.json                    # Development environment
+│   │   ├── staging.json                # Staging environment
+│   │   └── prod.json                   # Production environment
+│   ├── EnvironmentConfig.ts            # Configuration manager
+│   └── environment-loader.js           # NPM script integration
 ├── features/                           # Gherkin feature files
 │   ├── github-user-search.feature     # Basic search scenarios
 │   └── github-user-search-dynamic.feature # Data-driven scenarios
@@ -37,12 +46,28 @@ src/
 
 ## ⚡ Quick Start
 
-### Parallel Execution (Recommended)
+### Environment-Based Execution (Recommended)
 
 ```bash
 # Install dependencies
 npm ci
 
+# Development environment (visible browser, debug logging)
+npm run test:dev
+
+# Development with parallel execution
+npm run test:dev:parallel
+
+# Staging environment (parallel, moderate speed)
+npm run test:staging
+
+# Production environment (headless, CI-optimized)
+npm run test:prod
+```
+
+### Legacy Parallel Execution
+
+```bash
 # Run tests in parallel (4 workers)
 npm run test:parallel
 
@@ -68,7 +93,20 @@ npm run test:cucumber:headless
 
 ## 🔧 Available Scripts
 
-### Parallel Execution
+### Environment-Based Execution
+- `npm run test:dev` - Development environment (visible browser, HTML report)
+- `npm run test:dev:parallel` - Development with 4 workers
+- `npm run test:dev:fast` - Development with 6 workers
+- `npm run test:staging` - Staging environment (2 workers, headless)
+- `npm run test:prod` - Production environment (4 workers, CI-optimized)
+
+### Environment Management
+- `npm run env:info` - Show available environments
+- `npm run env:dev` - Load and display dev configuration
+- `npm run env:staging` - Load and display staging configuration
+- `npm run env:prod` - Load and display prod configuration
+
+### Legacy Parallel Execution
 - `npm run test:parallel` - Run with 4 workers (recommended)
 - `npm run test:parallel:fast` - Run with 6 workers (high-performance)
 - `npm run test:parallel:ci` - Run with 2 workers (CI-optimized)
@@ -95,17 +133,54 @@ npm run test:cucumber:headless
 
 ## 🛠️ Configuration
 
+### Environment Configuration System
+
+The framework supports multiple environments with specific configurations:
+
+#### Development Environment (`dev`)
+- **Browser**: Non-headless with 500ms slow motion for visibility
+- **Workers**: 4 (parallel execution enabled)
+- **Logging**: Debug level with screenshots, video, and trace
+- **Default User**: `torvalds`
+- **Usage**: `npm run test:dev:parallel`
+
+#### Staging Environment (`staging`)
+- **Browser**: Headless with 100ms slow motion
+- **Workers**: 2 (moderate parallel execution)
+- **Logging**: Info level with screenshots
+- **Default User**: `torvalds`
+- **Usage**: `npm run test:staging`
+
+#### Production Environment (`prod`)
+- **Browser**: Headless, optimized for speed
+- **Workers**: 4 (maximum parallel execution)
+- **Logging**: Warning level, minimal artifacts
+- **Default User**: `torvalds`
+- **Usage**: `npm run test:prod`
+
 ### Environment Variables
 
 ```bash
-# Parallel execution
-export CUCUMBER_WORKERS=4          # Number of Cucumber workers
-export PLAYWRIGHT_WORKERS=2        # Playwright workers per Cucumber process
-export HEADLESS=true              # Run in headless mode
-
-# Test environment
+# Environment selection
 export TEST_ENV=dev               # Environment: dev, staging, prod
+
+# Override specific settings
+export CUCUMBER_WORKERS=4          # Number of Cucumber workers
+export HEADLESS=true              # Run in headless mode
+export BASE_URL=https://custom.github.com  # Custom application URL
+
+# CI/CD
 export CI=true                    # CI environment detection
+```
+
+### Configuration Files
+
+```bash
+# Environment-specific configurations
+src/config/environments/dev.json      # Development settings
+src/config/environments/staging.json  # Staging settings
+src/config/environments/prod.json     # Production settings
+src/config/environments/base.json     # Shared base settings
 ```
 
 ### System Requirements
@@ -293,6 +368,7 @@ npm run test:cucumber -- --verbose
 
 ## 📚 Documentation
 
+- [Environment Configuration Guide](docs/ENVIRONMENT_CONFIGURATION.md) - Complete environment setup and usage
 - [Parallel Execution Guide](docs/PARALLEL_EXECUTION.md) - Comprehensive parallel testing guide
 - [Page Object Model](README-POM-Architecture.md) - POM architecture details
 - [Cucumber Configuration](cucumber.config.js) - Test runner configuration

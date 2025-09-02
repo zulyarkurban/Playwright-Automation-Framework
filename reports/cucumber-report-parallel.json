@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1399516875
+              "duration": 897587624
             }
           },
           {
@@ -23,11 +23,11 @@
             "line": 7,
             "name": "I navigate to the GitHub user search application",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1209792958
+              "duration": 1111182291
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 10,
             "name": "I search for user \"zulyarkurban\"",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:19"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:20"
             },
             "result": {
               "status": "passed",
-              "duration": 21252474125
+              "duration": 21249924082
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 11,
             "name": "I click on the GitHub profile link",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 3592010708
+              "duration": 3828639707
             }
           },
           {
@@ -62,11 +62,11 @@
             "line": 12,
             "name": "I click on the repositories section",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 146866291
+              "duration": 165032624
             }
           },
           {
@@ -75,11 +75,11 @@
             "line": 13,
             "name": "I should see all public repositories",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3002117291
+              "duration": 3001191665
             }
           },
           {
@@ -88,11 +88,11 @@
             "line": 14,
             "name": "I print out all public repository names",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 3046005917
+              "duration": 3065319833
             }
           },
           {
@@ -100,7 +100,112 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 293364625
+              "duration": 208475000
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
+        "keyword": "Scenario Outline",
+        "line": 19,
+        "name": "Search for multiple users with different profiles",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 774624125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1238961125
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for user \"octocat\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21247099666
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3720251415
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 172564500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3002828959
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3045426832
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 166887500
             }
           }
         ],
@@ -119,7 +224,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1324599790
+              "duration": 760581665
             }
           },
           {
@@ -128,11 +233,11 @@
             "line": 7,
             "name": "I navigate to the GitHub user search application",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1244797625
+              "duration": 1315548791
             }
           },
           {
@@ -141,11 +246,11 @@
             "line": 10,
             "name": "I search for user \"torvalds\"",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:19"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:20"
             },
             "result": {
               "status": "passed",
-              "duration": 21256761792
+              "duration": 21244547791
             }
           },
           {
@@ -154,11 +259,11 @@
             "line": 11,
             "name": "I click on the GitHub profile link",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 3582948625
+              "duration": 3377442041
             }
           },
           {
@@ -167,11 +272,11 @@
             "line": 12,
             "name": "I click on the repositories section",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 153335999
+              "duration": 169366833
             }
           },
           {
@@ -180,11 +285,11 @@
             "line": 13,
             "name": "I should see all public repositories",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3004490541
+              "duration": 3002936208
             }
           },
           {
@@ -193,11 +298,11 @@
             "line": 14,
             "name": "I print out all public repository names",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 3017975540
+              "duration": 3054343958
             }
           },
           {
@@ -205,7 +310,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 255333124
+              "duration": 140666790
             }
           }
         ],
@@ -224,7 +329,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1358619207
+              "duration": 972231625
             }
           },
           {
@@ -233,11 +338,11 @@
             "line": 7,
             "name": "I navigate to the GitHub user search application",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1218864792
+              "duration": 1138163165
             }
           },
           {
@@ -246,11 +351,11 @@
             "line": 10,
             "name": "I search for user \"microsoft\"",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:19"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:20"
             },
             "result": {
               "status": "passed",
-              "duration": 21246374541
+              "duration": 21241995500
             }
           },
           {
@@ -259,11 +364,11 @@
             "line": 11,
             "name": "I click on the GitHub profile link",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 4008208749
+              "duration": 3825560290
             }
           },
           {
@@ -272,11 +377,11 @@
             "line": 12,
             "name": "I click on the repositories section",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 5145201082
+              "duration": 159588083
             }
           },
           {
@@ -285,11 +390,11 @@
             "line": 13,
             "name": "I should see all public repositories",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3001433457
+              "duration": 3006518167
             }
           },
           {
@@ -298,11 +403,11 @@
             "line": 14,
             "name": "I print out all public repository names",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 2014813957
+              "duration": 3060150041
             }
           },
           {
@@ -310,7 +415,112 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 155095750
+              "duration": 372672874
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
+        "keyword": "Scenario Outline",
+        "line": 22,
+        "name": "Search for multiple users with different profiles",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 906831042
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 7,
+            "name": "I navigate to the GitHub user search application",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1180905708
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 10,
+            "name": "I search for user \"facebook\"",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:20"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21236093417
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 11,
+            "name": "I click on the GitHub profile link",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3923282416
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 12,
+            "name": "I click on the repositories section",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 154322374
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "I should see all public repositories",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3002477333
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "I print out all public repository names",
+            "match": {
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3056526375
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 379979707
             }
           }
         ],
@@ -329,7 +539,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 998491874
+              "duration": 913861375
             }
           },
           {
@@ -338,11 +548,11 @@
             "line": 7,
             "name": "I navigate to the GitHub user search application",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1243717290
+              "duration": 1086448792
             }
           },
           {
@@ -351,11 +561,11 @@
             "line": 26,
             "name": "I search for a user from the test data file",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:84"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:85"
             },
             "result": {
               "status": "passed",
-              "duration": 21240671708
+              "duration": 21240645749
             }
           },
           {
@@ -364,11 +574,11 @@
             "line": 27,
             "name": "I click on the GitHub profile link",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 3531516082
+              "duration": 3772442583
             }
           },
           {
@@ -377,11 +587,11 @@
             "line": 28,
             "name": "I click on the repositories section",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 142773417
+              "duration": 160154957
             }
           },
           {
@@ -390,11 +600,11 @@
             "line": 29,
             "name": "I should see all public repositories",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3001656917
+              "duration": 3002656333
             }
           },
           {
@@ -403,11 +613,11 @@
             "line": 30,
             "name": "I print out all public repository names",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 3022203417
+              "duration": 3065035749
             }
           },
           {
@@ -415,7 +625,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 214611457
+              "duration": 402110167
             }
           }
         ],
@@ -425,111 +635,6 @@
             "line": 24
           }
         ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
-        "keyword": "Scenario Outline",
-        "line": 22,
-        "name": "Search for multiple users with different profiles",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 1002317166
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "I navigate to the GitHub user search application",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1274212334
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "I search for user \"facebook\"",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21236264042
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "I click on the GitHub profile link",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3619192332
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "I click on the repositories section",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 5159232000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
-            "name": "I should see all public repositories",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3002532749
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 14,
-            "name": "I print out all public repository names",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 2017013083
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 144204083
-            }
-          }
-        ],
-        "tags": [],
         "type": "scenario"
       },
       {
@@ -544,7 +649,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 696320165
+              "duration": 729225707
             }
           },
           {
@@ -553,11 +658,11 @@
             "line": 7,
             "name": "I navigate to the GitHub user search application",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1113965291
+              "duration": 1157021749
             }
           },
           {
@@ -566,11 +671,11 @@
             "line": 34,
             "name": "I search for the default user for current environment",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:99"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:100"
             },
             "result": {
               "status": "passed",
-              "duration": 21236875209
+              "duration": 21237166292
             }
           },
           {
@@ -579,11 +684,11 @@
             "line": 35,
             "name": "I click on the GitHub profile link",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 3550597832
+              "duration": 3550138500
             }
           },
           {
@@ -592,11 +697,11 @@
             "line": 36,
             "name": "I click on the repositories section",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 151921582
+              "duration": 162407334
             }
           },
           {
@@ -605,11 +710,11 @@
             "line": 37,
             "name": "I should see all public repositories",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3000848916
+              "duration": 3002467958
             }
           },
           {
@@ -618,11 +723,11 @@
             "line": 38,
             "name": "I print out all public repository names",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 3046487499
+              "duration": 3045808209
             }
           },
           {
@@ -630,7 +735,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 135106541
+              "duration": 197357042
             }
           }
         ],
@@ -640,111 +745,6 @@
             "line": 32
           }
         ],
-        "type": "scenario"
-      },
-      {
-        "description": "",
-        "id": "dynamic-github-user-search-and-repository-exploration;search-for-multiple-users-with-different-profiles",
-        "keyword": "Scenario Outline",
-        "line": 19,
-        "name": "Search for multiple users with different profiles",
-        "steps": [
-          {
-            "keyword": "Before",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 604297250
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Given ",
-            "line": 7,
-            "name": "I navigate to the GitHub user search application",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 1330004082
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "When ",
-            "line": 10,
-            "name": "I search for user \"octocat\"",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:19"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 21249189540
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 11,
-            "name": "I click on the GitHub profile link",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3610303124
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 12,
-            "name": "I click on the repositories section",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 144447832
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 13,
-            "name": "I should see all public repositories",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3003268916
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
-            "line": 14,
-            "name": "I print out all public repository names",
-            "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3048948915
-            }
-          },
-          {
-            "keyword": "After",
-            "hidden": true,
-            "result": {
-              "status": "passed",
-              "duration": 154304125
-            }
-          }
-        ],
-        "tags": [],
         "type": "scenario"
       }
     ],
@@ -770,7 +770,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 611585041
+              "duration": 554062291
             }
           },
           {
@@ -779,11 +779,11 @@
             "line": 7,
             "name": "I navigate to the GitHub user search application",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1200486208
+              "duration": 1147171041
             }
           },
           {
@@ -792,11 +792,11 @@
             "line": 8,
             "name": "I search for user \"zulyarkurban\"",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:19"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:20"
             },
             "result": {
               "status": "passed",
-              "duration": 21234993750
+              "duration": 21234722125
             }
           },
           {
@@ -805,11 +805,11 @@
             "line": 9,
             "name": "I click on the GitHub profile link",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 3491295249
+              "duration": 3567979542
             }
           },
           {
@@ -818,11 +818,11 @@
             "line": 10,
             "name": "I click on the repositories section",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 156403666
+              "duration": 157851332
             }
           },
           {
@@ -831,11 +831,11 @@
             "line": 11,
             "name": "I should see all public repositories",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3002241167
+              "duration": 3003127916
             }
           },
           {
@@ -844,11 +844,11 @@
             "line": 12,
             "name": "I print out all public repository names",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 3038934667
+              "duration": 3037978041
             }
           },
           {
@@ -856,7 +856,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 167488375
+              "duration": 205382083
             }
           }
         ],
@@ -875,7 +875,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 661851416
+              "duration": 635930375
             }
           },
           {
@@ -884,11 +884,11 @@
             "line": 7,
             "name": "I navigate to the GitHub user search application",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:14"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:15"
             },
             "result": {
               "status": "passed",
-              "duration": 1095276958
+              "duration": 1090947082
             }
           },
           {
@@ -897,11 +897,11 @@
             "line": 8,
             "name": "I search for user \"octocat\"",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:19"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:20"
             },
             "result": {
               "status": "passed",
-              "duration": 21238764999
+              "duration": 21238475040
             }
           },
           {
@@ -910,11 +910,11 @@
             "line": 9,
             "name": "I click on the GitHub profile link",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:33"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:34"
             },
             "result": {
               "status": "passed",
-              "duration": 5639532749
+              "duration": 3363052792
             }
           },
           {
@@ -923,11 +923,11 @@
             "line": 10,
             "name": "I click on the repositories section",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:41"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:42"
             },
             "result": {
               "status": "passed",
-              "duration": 161994542
+              "duration": 156884250
             }
           },
           {
@@ -936,11 +936,11 @@
             "line": 11,
             "name": "I should see all public repositories",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:52"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:53"
             },
             "result": {
               "status": "passed",
-              "duration": 3001578625
+              "duration": 3003447541
             }
           },
           {
@@ -949,11 +949,11 @@
             "line": 12,
             "name": "I print out all public repository names",
             "match": {
-              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:74"
+              "location": "src/src/tests/step-definitions/github-user-search-steps-pom.ts:75"
             },
             "result": {
               "status": "passed",
-              "duration": 3052327083
+              "duration": 3058498249
             }
           },
           {
@@ -961,7 +961,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 137079958
+              "duration": 193449540
             }
           }
         ],

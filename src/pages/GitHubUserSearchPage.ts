@@ -1,13 +1,11 @@
 import { Page, Locator } from '@playwright/test';
 import { BasePage } from './BasePage';
+import { environmentConfig } from '../config/EnvironmentConfig';
 
 /**
  * Page Object for GitHub User Search Application
  */
 export class GitHubUserSearchPage extends BasePage {
-  // Page URL
-  private static readonly PAGE_URL = 'https://gh-users-search.netlify.app/';
-
   // Locators
   private readonly searchInput: Locator;
   private readonly searchButton: Locator;
@@ -16,7 +14,9 @@ export class GitHubUserSearchPage extends BasePage {
   private readonly userCards: Locator;
 
   constructor(page: Page) {
-    super(page, GitHubUserSearchPage.PAGE_URL);
+    // Load environment configuration and use search URL
+    const config = environmentConfig.getConfig();
+    super(page, config.application.searchUrl);
     
     // Initialize locators
     this.searchInput = this.page.locator('input[type="text"], input[placeholder*="search"], input[placeholder*="username"], input').first();

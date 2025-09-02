@@ -1,0 +1,36 @@
+{
+  "environment": {
+    "name": "development",
+    "description": "Development environment for local testing"
+  },
+  "application": {
+    "baseUrl": "https://github.com",
+    "searchUrl": "https://gh-users-search.netlify.app",
+    "apiUrl": "https://api.github.com"
+  },
+  "browser": {
+    "headless": false,
+    "slowMo": 500,
+    "timeout": 30000,
+    "viewport": {
+      "width": 1280,
+      "height": 720
+    }
+  },
+  "test": {
+    "timeout": 60000,
+    "retries": 0,
+    "workers": 4,
+    "reporter": "html"
+  },
+  "logging": {
+    "level": "debug",
+    "enableScreenshots": true,
+    "enableVideo": true,
+    "enableTrace": true
+  },
+  "users": {
+    "defaultUser": "torvalds",
+    "testUsers": ["torvalds", "nadvolod", "microsoft"]
+  }
+}

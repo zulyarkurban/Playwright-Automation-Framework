@@ -2,6 +2,7 @@ import { Given, When, Then, setDefaultTimeout } from '@cucumber/cucumber';
 import { expect } from '@playwright/test';
 import { CustomWorld } from '../support/world';
 import { DataHelpers, UserData } from '../../../utils/DataHelpers';
+import { environmentConfig } from '../../../config/EnvironmentConfig';
 
 // Set default timeout to 30 seconds for all steps
 setDefaultTimeout(30000);
@@ -97,11 +98,11 @@ When('I search for a user from the test data file', async function (this: Custom
 });
 
 When('I search for the default user for current environment', async function (this: CustomWorld) {
-  const env = process.env.TEST_ENV || 'dev';
-  const userData = DataHelpers.getDefaultUserForEnvironment(env);
-  console.log(`Searching for default user for ${env} environment: ${userData.username}`);
+  const config = environmentConfig.getConfig();
+  const defaultUser = config.users.defaultUser;
+  console.log(`Searching for default user for ${config.environment.name} environment: ${defaultUser}`);
   
-  await this.gitHubUserSearchPage.searchForUser(userData.username);
+  await this.gitHubUserSearchPage.searchForUser(defaultUser);
   try {
     await this.gitHubUserSearchPage.waitForSearchResults(15000);
   } catch (error) {
@@ -109,7 +110,7 @@ When('I search for the default user for current environment', async function (th
   }
   
   // Store user data for later use
-  (this as any).currentUserData = userData;
+  (this as any).currentUserData = { username: defaultUser, description: 'Default environment user' };
 });
 
 When('I search for a random user from test data', async function (this: CustomWorld) {
