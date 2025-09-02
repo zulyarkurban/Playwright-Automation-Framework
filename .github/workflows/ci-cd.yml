@@ -52,7 +52,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: test-reports-${{ github.run_number }}
+        name: test-reports-worker-${{ matrix.worker-id }}-${{ github.run_number }}
         path: |
           reports/
           test-results/
@@ -62,7 +62,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: cucumber-html-report-${{ github.run_number }}
+        name: cucumber-html-report-worker-${{ matrix.worker-id }}-${{ github.run_number }}
         path: reports/cucumber-report.html
         retention-days: 30
     
@@ -110,9 +110,31 @@ jobs:
             body: comment
           });
 
+  collect-reports:
+    name: Collect Test Reports
+    needs: test
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        pattern: "*-worker-*-${{ github.run_number }}"
+        path: collected-artifacts
+        merge-multiple: true
+    
+    - name: Upload consolidated test reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: consolidated-test-reports-${{ github.run_number }}
+        path: collected-artifacts/
+        retention-days: 30
+
   deploy:
     name: Deploy Application
-    needs: test
+    needs: [test, collect-reports]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     
@@ -142,7 +164,7 @@ jobs:
 
   notify:
     name: Notify Results
-    needs: [test, deploy]
+    needs: [test, collect-reports, deploy]
     runs-on: ubuntu-latest
     if: always()
     
