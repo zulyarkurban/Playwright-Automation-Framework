@@ -1,0 +1,41 @@
+# .gitattributes - Language detection configuration for GitHub
+
+# Exclude generated HTML reports from language statistics
+reports/*.html linguist-generated=true
+test-results/**/*.html linguist-generated=true
+
+# Mark HTML files in reports as documentation (not code)
+reports/*.html linguist-documentation=true
+
+# Exclude node_modules from language detection
+node_modules/* linguist-vendored=true
+
+# Mark test data files as data (not code)
+src/data/*.json linguist-language=JSON
+src/data/*.csv linguist-language=CSV
+
+# Ensure TypeScript is properly detected
+*.ts linguist-language=TypeScript
+
+# Mark configuration files appropriately
+*.json linguist-language=JSON
+*.yml linguist-language=YAML
+*.yaml linguist-language=YAML
+
+# Mark shell scripts
+*.sh linguist-language=Shell
+
+# Mark Gherkin feature files
+*.feature linguist-language=Gherkin
+
+# Mark Groovy files (Jenkins)
+Jenkinsfile linguist-language=Groovy
+
+# Exclude generated files and artifacts
+*.log linguist-generated=true
+*.tmp linguist-generated=true
+test-results/* linguist-generated=true
+
+# Mark documentation files
+*.md linguist-documentation=true
+docs/* linguist-documentation=true
