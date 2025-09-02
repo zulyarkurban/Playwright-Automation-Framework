@@ -271,6 +271,38 @@ When('I search for user {string}', async function (this: CustomWorld, username: 
 
 ## 🚀 CI/CD Integration
 
+### Jenkins Pipeline
+
+The framework includes a comprehensive Jenkins pipeline with automated scheduling and retry integration:
+
+```groovy
+# Jenkinsfile - Automated daily execution
+triggers {
+    // Run every weekday (Monday-Friday) at 6:00 AM
+    cron('0 6 * * 1-5')
+}
+```
+
+#### Jenkins Pipeline Features
+- **Scheduled Execution**: Automatic weekday runs at 6:00 AM
+- **Environment Support**: Parameterized builds for dev/staging/prod
+- **Retry Integration**: Automatic failed test retry with exponential backoff
+- **Email Notifications**: HTML-formatted reports sent to `email_report@ugdevops.com`
+- **Artifact Management**: Screenshots, videos, and reports archived automatically
+
+#### Jenkins Setup Commands
+```bash
+# Pipeline parameters available:
+ENVIRONMENT: dev/staging/prod
+TEST_TYPE: full/smoke/regression/parallel
+MAX_RETRIES: 3 (configurable)
+PARALLEL_WORKERS: 4 (configurable)
+ENABLE_RETRY: true/false
+GENERATE_REPORTS: true/false
+```
+
+For complete Jenkins setup instructions, see [Jenkins Integration Guide](docs/JENKINS_INTEGRATION.md).
+
 ### GitHub Actions Workflow
 
 ```yaml
@@ -497,6 +529,7 @@ npm run test:cucumber -- --verbose
 
 ## 📚 Documentation
 
+- [Jenkins Integration Guide](docs/JENKINS_INTEGRATION.md) - Complete Jenkins CI/CD setup and configuration
 - [Test Reporting Guide](docs/REPORTING.md) - Comprehensive reporting features and configuration
 - [Retry Strategies Guide](docs/RETRY_STRATEGIES.md) - Failed test retry mechanisms and configuration
 - [Environment Configuration Guide](docs/ENVIRONMENT_CONFIGURATION.md) - Complete environment setup and usage
