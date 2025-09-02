@@ -15,6 +15,10 @@ jobs:
     name: Run Tests
     timeout-minutes: 60
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        worker-id: [1, 2, 3, 4]
+      fail-fast: false
     
     steps:
     - name: Checkout code
@@ -35,11 +39,14 @@ jobs:
     - name: Create reports directory
       run: mkdir -p reports
     
-    - name: Run Cucumber tests (headless)
-      run: npm run test:cucumber:html
+    - name: Run Cucumber tests in parallel
+      run: npm run test:cucumber:parallel:ci
       env:
         CI: true
         HEADLESS: true
+        CUCUMBER_WORKERS: 2
+        WORKER_ID: ${{ matrix.worker-id }}
+        TOTAL_WORKERS: 4
     
     - name: Upload test reports
       uses: actions/upload-artifact@v4

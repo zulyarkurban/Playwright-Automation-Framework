@@ -15,12 +15,3 @@ Feature: GitHub User Search and Repository Exploration
       | username     |
       | zulyarkurban |
       | octocat      |
-      | torvalds     |
-
-  Scenario: Search for specific user with validation
-    Given I navigate to the GitHub user search application
-    When I search for user "microsoft"
-    And I click on the GitHub profile link
-    And I click on the repositories section
-    Then I should see all public repositories
-    And I print out all public repository names
