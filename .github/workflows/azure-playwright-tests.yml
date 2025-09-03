@@ -1,0 +1,171 @@
+name: Azure Playwright Testing - CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+  schedule:
+    # Run daily at 6:00 AM UTC (matches Jenkins schedule)
+    - cron: '0 6 * * 1-5'
+
+env:
+  NODE_VERSION: 'lts/*'
+  PLAYWRIGHT_SERVICE_URL: 'wss://eastus.api.playwright.microsoft.com/playwrightworkspaces/18d5185e-7f8a-46e0-afa3-002163bd7cef/browsers'
+
+jobs:
+  azure-cucumber-tests:
+    name: Azure Cucumber BDD Tests
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        environment: [dev, staging, prod]
+      fail-fast: false
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Create reports directory
+      run: mkdir -p reports
+    
+    - name: Run Azure Cucumber tests
+      run: npm run test:azure:parallel
+      env:
+        CI: true
+        HEADLESS: true
+        TEST_ENV: ${{ matrix.environment }}
+        CUCUMBER_WORKERS: 20
+        PLAYWRIGHT_SERVICE_URL: ${{ env.PLAYWRIGHT_SERVICE_URL }}
+        PLAYWRIGHT_SERVICE_ACCESS_TOKEN: ${{ secrets.PLAYWRIGHT_SERVICE_ACCESS_TOKEN }}
+    
+    - name: Upload test reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: azure-cucumber-reports-${{ matrix.environment }}-${{ github.run_number }}
+        path: |
+          reports/
+          test-results/
+        retention-days: 30
+
+
+  local-fallback-tests:
+    name: Local Fallback Tests
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    if: failure()
+    needs: [azure-cucumber-tests]
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ env.NODE_VERSION }}
+        cache: 'npm'
+    
+    - name: Install dependencies
+      run: npm ci
+    
+    - name: Install Playwright browsers
+      run: npx playwright install --with-deps
+    
+    - name: Run local fallback tests
+      run: npm run test:dev:parallel
+      env:
+        CI: true
+        HEADLESS: true
+        CUCUMBER_WORKERS: 4
+    
+    - name: Upload fallback test reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: fallback-test-reports-${{ github.run_number }}
+        path: |
+          reports/
+          test-results/
+        retention-days: 30
+
+  collect-reports:
+    name: Collect All Test Reports
+    needs: [azure-cucumber-tests]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Download all artifacts
+      uses: actions/download-artifact@v4
+      with:
+        pattern: "*-${{ github.run_number }}"
+        path: collected-artifacts
+        merge-multiple: true
+    
+    - name: Upload consolidated reports
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: consolidated-azure-reports-${{ github.run_number }}
+        path: collected-artifacts/
+        retention-days: 30
+
+  notify-results:
+    name: Notify Test Results
+    needs: [azure-cucumber-tests, collect-reports]
+    runs-on: ubuntu-latest
+    if: always()
+    
+    steps:
+    - name: Comment PR with Azure test results
+      uses: actions/github-script@v7
+      if: github.event_name == 'pull_request'
+      with:
+        script: |
+          const cucumberResult = '${{ needs.azure-cucumber-tests.result }}';
+          
+          let comment = '## 🌩️ Azure Cucumber BDD Testing Results\n\n';
+          
+          comment += '### Test Execution Summary:\n';
+          comment += `- **Azure Cucumber BDD Tests**: ${cucumberResult === 'success' ? '✅ PASSED' : '❌ FAILED'}\n\n`;
+          
+          if (cucumberResult === 'success') {
+            comment += '🎉 **All Azure Cucumber tests passed successfully!**\n\n';
+            comment += '**Benefits achieved:**\n';
+            comment += '- ⚡ 20+ parallel workers on Azure cloud\n';
+            comment += '- 🌐 Cross-browser testing (Chrome, Firefox, Safari, Mobile)\n';
+            comment += '- 🚀 No local browser installation required\n';
+            comment += '- 📊 Enterprise-scale BDD test execution\n';
+          } else {
+            comment += '⚠️ **Some Azure tests failed.** Check artifacts for details.\n\n';
+            comment += 'Fallback to local browsers may have been triggered automatically.\n';
+          }
+          
+          comment += '\n📋 [Download detailed reports from Actions artifacts](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }})';
+          
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: comment
+          });
+    
+    - name: Send email notification
+      if: always()
+      run: |
+        echo "📧 Azure Cucumber BDD Testing Results:"
+        echo "Cucumber Tests: ${{ needs.azure-cucumber-tests.result }}"
+        echo "Reports available at: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"

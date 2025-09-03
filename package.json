@@ -32,6 +32,8 @@
     "retry:stats": "./scripts/retry-failed-tests.sh --stats",
     "retry:clear": "./scripts/retry-failed-tests.sh --clear",
     "retry:demo": "npx ts-node src/utils/TestRetryDemo.ts",
+    "test:azure": "cucumber-js --config cucumber.azure.config.js",
+    "test:azure:parallel": "cucumber-js --config cucumber.azure.config.js --profile azure",
     "build": "echo 'No build step required for test automation project'",
     "deploy": "echo 'Configure deployment target in GitHub Actions'"
   },
@@ -49,6 +51,7 @@
     "typescript": "^5.9.2"
   },
   "dependencies": {
+    "@azure/msal-node": "^3.7.3",
     "npx": "^10.2.2"
   }
 }

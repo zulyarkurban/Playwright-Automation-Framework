@@ -1,0 +1,819 @@
+{
+  "config": {
+    "configFile": "/Volumes/Documents/Projects/Playwright_Automation/playwright.service.config.ts",
+    "rootDir": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 5
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "outputFolder": "reports/playwright-report"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/playwright-results.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "reports/playwright-junit.xml"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Volumes/Documents/Projects/Playwright_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Volumes/Documents/Projects/Playwright_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Volumes/Documents/Projects/Playwright_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Volumes/Documents/Projects/Playwright_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "mobile-chrome",
+        "name": "mobile-chrome",
+        "testDir": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Volumes/Documents/Projects/Playwright_Automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 5
+        },
+        "id": "mobile-safari",
+        "name": "mobile-safari",
+        "testDir": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.55.0",
+    "workers": 20,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "github-search.spec.ts",
+      "file": "github-search.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "GitHub User Search - Playwright Native",
+          "file": "github-search.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should search for a user and view repositories",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 31082,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m  7 |\u001b[39m     \n \u001b[90m  8 |\u001b[39m     \u001b[90m// Search for a user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'torvalds'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \n \u001b[90m 12 |\u001b[39m     \u001b[90m// Click on the user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:9:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:30:37.776Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-abe4eb3b0846bef761a9",
+              "file": "github-search.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should search for multiple users",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 0,
+                      "status": "timedOut",
+                      "duration": 30776,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 18,
+                            "line": 40
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 38 |\u001b[39m       \n \u001b[90m 39 |\u001b[39m       \u001b[90m// Search for user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m user)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m       \n \u001b[90m 43 |\u001b[39m       \u001b[90m// Click on user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:40:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:31:09.810Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-chromium/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-472154590cae215eeb3e",
+              "file": "github-search.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should search for a user and view repositories",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 30826,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m  7 |\u001b[39m     \n \u001b[90m  8 |\u001b[39m     \u001b[90m// Search for a user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'torvalds'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \n \u001b[90m 12 |\u001b[39m     \u001b[90m// Click on the user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:9:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:30:37.791Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-firefox/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-firefox/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-8e7fc7836fba02ed701c",
+              "file": "github-search.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should search for multiple users",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "firefox",
+                  "projectName": "firefox",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
+                      "status": "timedOut",
+                      "duration": 30309,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 18,
+                            "line": 40
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 38 |\u001b[39m       \n \u001b[90m 39 |\u001b[39m       \u001b[90m// Search for user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m user)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m       \n \u001b[90m 43 |\u001b[39m       \u001b[90m// Click on user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:40:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:31:12.429Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-firefox/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-firefox/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-firefox/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-503947857c6cbb89c846",
+              "file": "github-search.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should search for a user and view repositories",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 30551,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m  7 |\u001b[39m     \n \u001b[90m  8 |\u001b[39m     \u001b[90m// Search for a user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'torvalds'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \n \u001b[90m 12 |\u001b[39m     \u001b[90m// Click on the user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:9:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:30:37.788Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-webkit/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-webkit/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-45e3cc6796ef590b2aec",
+              "file": "github-search.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should search for multiple users",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "webkit",
+                  "projectName": "webkit",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 2,
+                      "status": "timedOut",
+                      "duration": 30700,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 18,
+                            "line": 40
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 38 |\u001b[39m       \n \u001b[90m 39 |\u001b[39m       \u001b[90m// Search for user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m user)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m       \n \u001b[90m 43 |\u001b[39m       \u001b[90m// Click on user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:40:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:31:09.241Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-webkit/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-webkit/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-webkit/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-d9ec83a453075770af7e",
+              "file": "github-search.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should search for a user and view repositories",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 31020,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m  7 |\u001b[39m     \n \u001b[90m  8 |\u001b[39m     \u001b[90m// Search for a user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'torvalds'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \n \u001b[90m 12 |\u001b[39m     \u001b[90m// Click on the user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:9:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:30:37.788Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-mobile-chrome/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-mobile-chrome/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-mobile-chrome/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-4d54491fe5ae27c06ee5",
+              "file": "github-search.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should search for multiple users",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-chrome",
+                  "projectName": "mobile-chrome",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "timedOut",
+                      "duration": 30734,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 18,
+                            "line": 40
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 38 |\u001b[39m       \n \u001b[90m 39 |\u001b[39m       \u001b[90m// Search for user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m user)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m       \n \u001b[90m 43 |\u001b[39m       \u001b[90m// Click on user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:40:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:31:09.731Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-mobile-chrome/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-mobile-chrome/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-mobile-chrome/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-e7e8f8ddad2cfa14fd2e",
+              "file": "github-search.spec.ts",
+              "line": 33,
+              "column": 7
+            },
+            {
+              "title": "should search for a user and view repositories",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "timedOut",
+                      "duration": 30422,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 16,
+                            "line": 9
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m  7 |\u001b[39m     \n \u001b[90m  8 |\u001b[39m     \u001b[90m// Search for a user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'torvalds'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m     \n \u001b[90m 12 |\u001b[39m     \u001b[90m// Click on the user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:9:16\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:30:37.784Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-mobile-safari/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-mobile-safari/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--c52a6--user-and-view-repositories-mobile-safari/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-fb9bfe3ce0cd0a06aeec",
+              "file": "github-search.spec.ts",
+              "line": 4,
+              "column": 7
+            },
+            {
+              "title": "should search for multiple users",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "mobile-safari",
+                  "projectName": "mobile-safari",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 4,
+                      "status": "timedOut",
+                      "duration": 30500,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts",
+                            "column": 18,
+                            "line": 40
+                          },
+                          "message": "Error: page.fill: Test timeout of 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('input[placeholder=\"Search GitHub\"]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 38 |\u001b[39m       \n \u001b[90m 39 |\u001b[39m       \u001b[90m// Search for user\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 40 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mfill(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m user)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                  \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 41 |\u001b[39m       \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mpress(\u001b[32m'input[placeholder=\"Search GitHub\"]'\u001b[39m\u001b[33m,\u001b[39m \u001b[32m'Enter'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 42 |\u001b[39m       \n \u001b[90m 43 |\u001b[39m       \u001b[90m// Click on user profile\u001b[39m\u001b[0m\n\u001b[2m    at /Volumes/Documents/Projects/Playwright_Automation/src/tests/playwright/github-search.spec.ts:40:18\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-03T22:31:09.247Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-mobile-safari/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-mobile-safari/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Volumes/Documents/Projects/Playwright_Automation/test-results/github-search-GitHub-User--bcc13-d-search-for-multiple-users-mobile-safari/error-context.md"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a350090f253bc1f94d81-a303b638601934d75c0a",
+              "file": "github-search.spec.ts",
+              "line": 33,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-09-03T22:30:37.352Z",
+    "duration": 66563.96800000001,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 10,
+    "flaky": 0
+  }
+}
