@@ -49,7 +49,9 @@ export default defineConfig({
     
     // Microsoft Playwright Testing service URL with authentication
     connectOptions: process.env.PLAYWRIGHT_SERVICE_URL ? {
-      wsEndpoint: process.env.PLAYWRIGHT_SERVICE_URL,
+      wsEndpoint: process.env.PLAYWRIGHT_SERVICE_URL.includes('?os=') 
+        ? process.env.PLAYWRIGHT_SERVICE_URL 
+        : `${process.env.PLAYWRIGHT_SERVICE_URL}?os=linux`,
       ...(process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN && {
         headers: {
           'Authorization': `Bearer ${process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN}`

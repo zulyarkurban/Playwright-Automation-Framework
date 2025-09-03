@@ -30,9 +30,14 @@ export class CustomWorld extends World {
       try {
         console.log('Attempting to connect to Azure Playwright Testing service...');
         
-        // Configure connection options with authentication
+        // Configure connection URL with OS parameter
+        let wsEndpoint = process.env.PLAYWRIGHT_SERVICE_URL;
+        if (wsEndpoint && !wsEndpoint.includes('?os=')) {
+          wsEndpoint += '?os=linux';
+        }
+        
         const connectOptions: any = {
-          wsEndpoint: process.env.PLAYWRIGHT_SERVICE_URL
+          wsEndpoint: wsEndpoint
         };
         
         // Add authentication if token is available
