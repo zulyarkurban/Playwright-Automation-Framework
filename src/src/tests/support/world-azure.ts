@@ -32,13 +32,15 @@ export class CustomWorld extends World {
         
         // Configure connection options with authentication
         const connectOptions: any = {
-          wsEndpoint: process.env.PLAYWRIGHT_SERVICE_URL,
-          headers: {
-            'x-mpt-access-key': process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN || '',
-            'User-Agent': 'Playwright/1.40.0',
-            'x-mpt-os': 'Linux'  // Always set OS parameter for Azure
-          }
+          wsEndpoint: process.env.PLAYWRIGHT_SERVICE_URL
         };
+        
+        // Add authentication if token is available
+        if (process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN) {
+          connectOptions.headers = {
+            'Authorization': `Bearer ${process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN}`
+          };
+        }
         
         this.browser = await chromium.connect(connectOptions);
         console.log('✅ Successfully connected to Azure cloud browsers');
