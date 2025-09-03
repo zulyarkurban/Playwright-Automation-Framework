@@ -53,7 +53,7 @@ export default defineConfig({
       headers: {
         'x-mpt-access-key': process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN || '',
         'User-Agent': 'Playwright/1.40.0',
-        ...(process.env.CI && { 'x-mpt-os': 'Linux' })
+        'x-mpt-os': 'Linux'  // Always set OS parameter for Azure
       }
     } : undefined,
   },

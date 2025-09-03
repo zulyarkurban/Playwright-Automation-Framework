@@ -35,14 +35,10 @@ export class CustomWorld extends World {
           wsEndpoint: process.env.PLAYWRIGHT_SERVICE_URL,
           headers: {
             'x-mpt-access-key': process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN || '',
-            'User-Agent': 'Playwright/1.40.0'
+            'User-Agent': 'Playwright/1.40.0',
+            'x-mpt-os': 'Linux'  // Always set OS parameter for Azure
           }
         };
-        
-        // Add OS parameter for Azure cloud browsers
-        if (process.env.CI) {
-          connectOptions.headers['x-mpt-os'] = 'Linux';
-        }
         
         this.browser = await chromium.connect(connectOptions);
         console.log('✅ Successfully connected to Azure cloud browsers');
