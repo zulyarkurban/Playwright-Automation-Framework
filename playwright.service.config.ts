@@ -50,11 +50,11 @@ export default defineConfig({
     // Microsoft Playwright Testing service URL with authentication
     connectOptions: process.env.PLAYWRIGHT_SERVICE_URL ? {
       wsEndpoint: process.env.PLAYWRIGHT_SERVICE_URL,
-      ...(process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN && {
-        headers: {
-          'Authorization': `Bearer ${process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN}`
-        }
-      })
+      headers: {
+        'x-mpt-access-key': process.env.PLAYWRIGHT_SERVICE_ACCESS_TOKEN || '',
+        'User-Agent': 'Playwright/1.40.0',
+        ...(process.env.CI && { 'x-mpt-os': 'Linux' })
+      }
     } : undefined,
   },
 
