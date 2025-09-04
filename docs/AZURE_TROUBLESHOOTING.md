@@ -198,3 +198,46 @@ npm run test:azure:parallel
 - **Notifications**: Email/Slack integration available
 
 This integration provides enterprise-scale testing capabilities with automatic fallback, ensuring tests always run regardless of Azure service availability.
+
+## 📧 Email Notification Issues
+
+### Gmail SMTP Authentication Error (535-5.7.8)
+**Problem:** `Username and Password not accepted` error when using Gmail SMTP.
+
+**Solution:**
+1. **Enable 2-Factor Authentication** on your Gmail account
+2. **Generate App Password:**
+   - Go to Google Account → Security → 2-Step Verification
+   - Scroll to "App passwords" → Select "Mail"
+   - Generate 16-character app password
+3. **Update GitHub Secrets:**
+   ```
+   SMTP_USERNAME: your-gmail@gmail.com
+   SMTP_PASSWORD: your-16-character-app-password  # NOT regular password
+   EMAIL_FROM: your-gmail@gmail.com
+   EMAIL_TO: recipient@email.com
+   ```
+
+### Alternative SMTP Providers
+If Gmail doesn't work, try these alternatives:
+
+**Outlook/Hotmail:**
+```yaml
+server_address: smtp-mail.outlook.com
+server_port: 587
+secure: true
+```
+
+**SendGrid:**
+```yaml
+server_address: smtp.sendgrid.net
+server_port: 587
+secure: true
+username: apikey
+password: your-sendgrid-api-key
+```
+
+### General Email Issues
+- Verify SMTP credentials are correctly set in GitHub secrets
+- Check email server settings match your provider
+- Ensure no firewall/network restrictions blocking SMTP ports
