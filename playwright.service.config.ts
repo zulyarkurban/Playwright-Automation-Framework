@@ -28,6 +28,8 @@ export default defineConfig({
   
   // Reporter configuration
   reporter: [
+    ['list'],
+    ['@azure/microsoft-playwright-testing/reporter'],
     ['html', { outputFolder: 'reports/playwright-report' }],
     ['json', { outputFile: 'reports/playwright-results.json' }],
     ['junit', { outputFile: 'reports/playwright-junit.xml' }]
